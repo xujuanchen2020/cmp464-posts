@@ -18,7 +18,7 @@ const Form = () => {
     const classes = useStyles();
     const dispatch = useDispatch();
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault(); // not get refresh from the browser
         dispatch(createPost(postData));
     }

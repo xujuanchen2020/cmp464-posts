@@ -4,8 +4,8 @@ import { useDispatch } from 'react-redux'
 
 import { getPosts } from './actions/posts'
 import cubic from './images/cubic.png'
-import Form from './Form/Form'
-import Posts from './Posts/Posts'
+import Form from './components/Form/Form'
+import Posts from './components/Posts/Posts'
 import useStyles from './styles'
 
 const App = () => {
