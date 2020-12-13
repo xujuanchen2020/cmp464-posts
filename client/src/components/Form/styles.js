@@ -9,9 +9,8 @@ export default makeStyles((theme) => ({
   },
 
   paper: {
-    background: 'beige',
-    padding: theme.spacing(2),
-    backgroundBlendMode: 'darken',
+    backgroundColor: 'rgba(245,245,220,0.9)',
+    padding: theme.spacing(3),
   },
 
   form: {

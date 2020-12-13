@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 export default makeStyles({
   media: {
     paddingTop: '57%',
-    backgroundColor: 'rgba(0,0,100,0.3)',
+    backgroundColor: 'rgba(0,0,0,0.5)',
     backgroundBlendMode: 'darken',
   },
 
@@ -22,6 +22,7 @@ export default makeStyles({
     borderRadius: '5px',
     height: '100%',
     position: 'relative',
+    backgroundColor: 'rgba(245,245,220,0.9)',
   },
 
   overlay: {

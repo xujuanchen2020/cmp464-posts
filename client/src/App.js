@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Container, AppBar, Typography, Grow, Grid } from '@material-ui/core';
+import { Container, AppBar, Typography, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
 
 import Posts from './components/Posts/Posts';
@@ -23,21 +23,21 @@ const App = () => {
         <img className={classes.image} src={cubic} alt="icon" height="60" />
         <Typography className={classes.heading} variant="h2" align="center">Posts</Typography>
       </AppBar>
-      <Grow in>
-        <Container>
-          <Grid container justify="space-between" alignItems="stretch" spacing={8}>
-            
-            <Grid item xs={12} sm={4}>
-              <Form currentId={currentId} setCurrentId={setCurrentId} />
-            </Grid>
 
-            <Grid item xs={12} sm={8}>
-              <Posts setCurrentId={setCurrentId} />
-            </Grid>
-
+      <Container>
+        <Grid container justify="space-between" alignItems="stretch" spacing={8}>
+          
+          <Grid item xs={12} sm={4}>
+            <Form currentId={currentId} setCurrentId={setCurrentId} />
           </Grid>
-        </Container>
-      </Grow>
+
+          <Grid item xs={12} sm={8}>
+            <Posts setCurrentId={setCurrentId} />
+          </Grid>
+
+        </Grid>
+      </Container>
+
     </Container>
   );
 };
