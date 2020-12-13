@@ -30,18 +30,19 @@ const Form = ({currentId, setCurrentId}) => {
         }else{
             dispatch(createPost(postData));
         }
-
+        clear();
     }
  
     const clear = () => {
-
+        setCurrentId(0);
+        setPostData({ creator: '', title: '', message: '', tags: '', selectedFile: '' });
     }
 
     return (
         <Paper className={classes.paper}>
             <form className={`${classes.root} ${classes.form}`} autoComplete='off' onSubmit={handleSubmit} >
                 <Typography variant='h6'>
-                    Create a post
+                {currentId ? `Editing "${post.title}"` : 'Creating a Post'} 
                 </Typography>
             <TextField 
                 name='creator' 
