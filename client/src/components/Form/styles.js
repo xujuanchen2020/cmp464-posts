@@ -11,6 +11,7 @@ export default makeStyles((theme) => ({
   paper: {
     background: 'beige',
     padding: theme.spacing(2),
+    backgroundBlendMode: 'darken',
   },
 
   form: {
