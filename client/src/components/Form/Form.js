@@ -40,10 +40,10 @@ const Form = ({ currentId, setCurrentId }) => {
         <TextField name="creator" label="Name" fullWidth value={postData.creator} onChange={(e) => setPostData({ ...postData, creator: e.target.value })} />
         <TextField name="title" label="Title" fullWidth value={postData.title} onChange={(e) => setPostData({ ...postData, title: e.target.value })} />
         <TextField name="tags" label="Tags (coma separated)" fullWidth value={postData.tags} onChange={(e) => setPostData({ ...postData, tags: e.target.value.split(',') })} />
-        <TextField name="message" variant="outlined" label="Message" fullWidth multiline rows={3} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
+        <TextField name="message" label="Message" fullWidth multiline rows={3} value={postData.message} onChange={(e) => setPostData({ ...postData, message: e.target.value })} />
         <div className={classes.fileInput}><FileBase type="file" multiple={false} onDone={({ base64 }) => setPostData({ ...postData, selectedFile: base64 })} /></div>
-        <Button className={classes.buttonSubmit} variant="contained" color="primary" size="small" type="submit" fullWidth>Submit</Button>
-        <Button variant="contained" color="secondary" size="small" onClick={clear} fullWidth>Clear</Button>
+        <Button className={classes.buttonSubmit} variant="contained" size="small" type="submit" fullWidth>Submit</Button>
+        <Button className={classes.buttonClear} variant="contained" size="small" onClick={clear} fullWidth>Clear</Button>
       </form>
     </Paper>
   );

@@ -16,6 +16,7 @@ export default makeStyles(()=>({
     },
 
     image: {
+        marginTop: '10px',
         marginRight: '40px',
         paddingBottom: '10px',
     }

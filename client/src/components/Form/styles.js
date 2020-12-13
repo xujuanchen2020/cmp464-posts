@@ -27,6 +27,14 @@ export default makeStyles((theme) => ({
 
   buttonSubmit: {
     marginBottom: 10,
+    color: 'beige',
+    backgroundColor: 'RGBA(0,0,60,0.9)',
+  },
+
+  buttonClear: {
+    marginBottom: 10,
+    color: 'beige',
+    backgroundColor: 'RGBA(204,48,10,0.9)',
   },
 
 }));
