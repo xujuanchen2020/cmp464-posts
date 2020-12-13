@@ -6,6 +6,7 @@ import useStyles from './styles'
 import {createPost, updatePost} from '../../actions/posts'
 
 const Form = ({currentId, setCurrentId}) => {
+    const post = useSelector(state => (currentId ? state.posts.find((message) => message._id === currentId) : null));
     const [postData, setPostData] = useState({
         creator: '',
         title: '',
@@ -14,7 +15,6 @@ const Form = ({currentId, setCurrentId}) => {
         selectedFile: '',
         
     });
-   //const post = useSelector((state) => (currentId ? state.posts.find((message) => message._id === currentId) : null));
 
     const classes = useStyles();
     const dispatch = useDispatch();
