@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Container, AppBar, Typography, Grid } from '@material-ui/core';
 import { useDispatch } from 'react-redux';
-
-import Posts from './components/Posts/Posts';
+import Posts from './components/PostContainer/PostContainer';
 import Form from './components/Form/Form';
-import { getPosts } from './actions/posts';
+import { getPosts } from './actions/actions';
 import useStyles from './styles';
 import cubic from './images/cubic.png';
 
@@ -25,13 +24,13 @@ const App = () => {
       </AppBar>
 
       <Container>
-        <Grid container justify="space-between" alignItems="stretch" spacing={8}>
+        <Grid container justify="space-between" alignItems="stretch" spacing={3}>
           
           <Grid item xs={12} sm={4}>
             <Form currentId={currentId} setCurrentId={setCurrentId} />
           </Grid>
 
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={7}>
             <Posts setCurrentId={setCurrentId} />
           </Grid>
 

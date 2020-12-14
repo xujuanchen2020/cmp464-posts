@@ -13,7 +13,6 @@ export default makeStyles(()=>({
 
     heading:{
         color: 'rgb(0,0,100)',
-        fontFamily: "fantasy",
         fontFamily: "cursive",
     },
 

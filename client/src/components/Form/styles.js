@@ -21,17 +21,17 @@ export default makeStyles((theme) => ({
 
   fileInput: {
     width: '95%',
-    margin: '10px 0',
+    margin: '15px 0',
   },
 
   buttonSubmit: {
-    marginBottom: 10,
+    marginBottom: 15,
     color: 'beige',
     backgroundColor: 'RGBA(0,0,60,0.9)',
   },
 
   buttonClear: {
-    marginBottom: 10,
+    marginBottom: 15,
     color: 'beige',
     backgroundColor: 'RGBA(204,48,10,0.9)',
   },
