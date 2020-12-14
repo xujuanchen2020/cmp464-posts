@@ -58,5 +58,9 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
   },
+
+  mr10: {
+    marginRight: 5,
+  },
   
 });
