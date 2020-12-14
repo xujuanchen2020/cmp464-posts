@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core';
 
-export default makeStyles(()=>({
+export default makeStyles(()=>({ // jss, callback function return an object
     appBar:{
         borderRadius: 5,
         margin: '10px 0',

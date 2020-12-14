@@ -1,12 +1,13 @@
 import React from 'react';
 import { Grid } from '@material-ui/core';
 import { useSelector } from 'react-redux';
-
 import Post from '../Post/Post';
 import useStyles from './styles';
 
-const Posts = ({ setCurrentId }) => {
-  const posts = useSelector((state) => state.posts);
+const PostContainer = ({ setCurrentId }) => { 
+  //fetch data from global store
+  //retrieve the data from reducer posts
+  const posts = useSelector((state) => state.posts); 
   const classes = useStyles();
 
   return (
@@ -20,4 +21,4 @@ const Posts = ({ setCurrentId }) => {
   );
 };
 
-export default Posts;
+export default PostContainer;

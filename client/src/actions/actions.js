@@ -1,12 +1,12 @@
 import { FETCH_ALL, CREATE, UPDATE, DELETE, LIKE } from '../constants/actionTypes';
+import * as api from '../api/index.js';  //use api to fetch posts
 
-import * as api from '../api/index.js';
-
-export const getPosts = () => async (dispatch) => {
+// actions
+export const getPosts = () => async (dispatch) => {//redux thunk
   try {
     const { data } = await api.fetchPosts();
-
-    dispatch({ type: FETCH_ALL, payload: data });
+    const action = { type: FETCH_ALL, payload: data };
+    dispatch( action ); //pass data from backend
   } catch (error) {
     console.log(error.message);
   }
@@ -15,8 +15,8 @@ export const getPosts = () => async (dispatch) => {
 export const createPost = (post) => async (dispatch) => {
   try {
     const { data } = await api.createPost(post);
-
-    dispatch({ type: CREATE, payload: data });
+    const action = { type: CREATE, payload: data };
+    dispatch( action );
   } catch (error) {
     console.log(error.message);
   }
@@ -25,8 +25,8 @@ export const createPost = (post) => async (dispatch) => {
 export const updatePost = (id, post) => async (dispatch) => {
   try {
     const { data } = await api.updatePost(id, post);
-
-    dispatch({ type: UPDATE, payload: data });
+    const action = { type: UPDATE, payload: data };
+    dispatch( action );
   } catch (error) {
     console.log(error.message);
   }
@@ -35,8 +35,8 @@ export const updatePost = (id, post) => async (dispatch) => {
 export const likePost = (id) => async (dispatch) => {
   try {
     const { data } = await api.likePost(id);
-
-    dispatch({ type: LIKE, payload: data });
+    const action = { type: LIKE, payload: data };
+    dispatch( action );
   } catch (error) {
     console.log(error.message);
   }
@@ -45,8 +45,8 @@ export const likePost = (id) => async (dispatch) => {
 export const deletePost = (id) => async (dispatch) => {
   try {
     await await api.deletePost(id);
-
-    dispatch({ type: DELETE, payload: id });
+    const action = { type: DELETE, payload: id };
+    dispatch( action );
   } catch (error) {
     console.log(error.message);
   }
