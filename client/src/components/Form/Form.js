@@ -22,21 +22,32 @@ const Form = ({ currentId, setCurrentId }) => {
   const dispatch = useDispatch();
   const classes = useStyles();
 
-  useEffect(() => { if (post) setPostData(post); }, [post]);
+  useEffect(() => { 
+    if (post) 
+      setPostData(post); 
+    }, [post]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (currentId === 0) {
-      dispatch(createPost(postData));
+    // if (currentId === 0) {
+    //   dispatch(createPost(postData));
+    //   clear();
+    // } else {
+    //   dispatch(updatePost(currentId, postData));
+    //   clear();
+    // }
+
+    if (currentId) {
+      dispatch(updatePost(currentId, postData));
       clear();
     } else {
-      dispatch(updatePost(currentId, postData));
+      dispatch(createPost(postData));
       clear();
     }
   };
 
   const clear = () => {
-    setCurrentId(0);
+    setCurrentId(null);
     setPostData({ 
       creator: '', 
       title: '', 

@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
 
   paper: {
     backgroundColor: 'rgba(245,245,220,0.9)',
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
   },
 
   form: {
@@ -21,11 +21,11 @@ export default makeStyles((theme) => ({
 
   fileInput: {
     width: '95%',
-    margin: '15px 0',
+    margin: '10px 0',
   },
 
   buttonSubmit: {
-    marginBottom: 15,
+    marginBottom: 10,
     color: 'beige',
     backgroundColor: 'RGBA(0,0,60,0.9)',
   },

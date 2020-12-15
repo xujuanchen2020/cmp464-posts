@@ -27,7 +27,8 @@ const Post = ({ post, setCurrentId }) => {
       </div>
 
       <div className={classes.overlay2}>
-        <Button style={{ color: 'beige' }} size="small" onClick={() => setCurrentId(post._id)}>
+        <Button style={{ color: 'beige' }} size="small" 
+          onClick={() => setCurrentId(post._id)}>
           <MoreHorizIcon />
         </Button>
       </div>
@@ -49,12 +50,14 @@ const Post = ({ post, setCurrentId }) => {
       </CardContent>
 
       <CardActions className={classes.cardActions}>
-        <Button style={{color: 'rgb(0,0,100)' }} size="small" onClick={() => dispatch(likePost(post._id))}>
+        <Button style={{color: 'rgb(0,0,100)' }} size="small" 
+          onClick={() => dispatch(likePost(post._id))}>
           <FavoriteIcon fontSize="small" /> 
           <span className={classes.mr10}></span>Like 
           {post.likeCount} 
         </Button>
-        <Button style={{ color: 'rgb(204,48,10)' }} size="small" onClick={() => dispatch(deletePost(post._id))}>
+        <Button style={{ color: 'rgb(204,48,10)' }} size="small" 
+          onClick={() => dispatch(deletePost(post._id))}>
           <CancelIcon fontSize="small" /> 
           <span className={classes.mr10}></span>Delete 
         </Button>

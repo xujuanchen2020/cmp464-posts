@@ -8,7 +8,7 @@ export const getPosts = () => async (dispatch) => {//redux thunk
     const action = { type: FETCH_ALL, payload: data };
     dispatch( action ); //pass data from backend
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
@@ -18,7 +18,7 @@ export const createPost = (post) => async (dispatch) => {
     const action = { type: CREATE, payload: data };
     dispatch( action );
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
@@ -28,17 +28,7 @@ export const updatePost = (id, post) => async (dispatch) => {
     const action = { type: UPDATE, payload: data };
     dispatch( action );
   } catch (error) {
-    console.log(error.message);
-  }
-};
-
-export const likePost = (id) => async (dispatch) => {
-  try {
-    const { data } = await api.likePost(id);
-    const action = { type: LIKE, payload: data };
-    dispatch( action );
-  } catch (error) {
-    console.log(error.message);
+    console.log(error);
   }
 };
 
@@ -48,6 +38,16 @@ export const deletePost = (id) => async (dispatch) => {
     const action = { type: DELETE, payload: id };
     dispatch( action );
   } catch (error) {
-    console.log(error.message);
+    console.log(error);
+  }
+};
+
+export const likePost = (id) => async (dispatch) => {
+  try {
+    const { data } = await api.likePost(id);
+    const action = { type: LIKE, payload: data };
+    dispatch( action );
+  } catch (error) {
+    console.log(error);
   }
 };
