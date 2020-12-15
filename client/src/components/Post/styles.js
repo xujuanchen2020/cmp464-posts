@@ -59,7 +59,7 @@ export default makeStyles({
     justifyContent: 'space-between',
   },
 
-  mr10: {
+  mr5: {
     marginRight: 5,
   },
   

@@ -53,13 +53,13 @@ const Post = ({ post, setCurrentId }) => {
         <Button style={{color: 'rgb(0,0,100)' }} size="small" 
           onClick={() => dispatch(likePost(post._id))}>
           <FavoriteIcon fontSize="small" /> 
-          <span className={classes.mr10}></span>Like 
+          <span className={classes.mr5}></span>Like 
           {post.likeCount} 
         </Button>
         <Button style={{ color: 'rgb(204,48,10)' }} size="small" 
           onClick={() => dispatch(deletePost(post._id))}>
           <CancelIcon fontSize="small" /> 
-          <span className={classes.mr10}></span>Delete 
+          <span className={classes.mr5}></span>Delete 
         </Button>
       </CardActions>
 
