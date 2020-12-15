@@ -1,5 +1,5 @@
 # cmp464-posts
-
+Delpoy URL:  https://posts2020.netlify.app/  <br/>
 This repo is project 2 for CMP464 web development.<br/>
 It's a good MERN full-stack practice, which used Express, Redux, Cors, Axios, Mongoose at the backend. <br/>
 The web use mongoDB to host it's data.<br/>
